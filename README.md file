@@ -1,0 +1,54 @@
+# Cypress Trial Library Tests
+
+Quick test suite for the trial opportunities page. Uses Cypress for E2E testing with some basic page object patterns.
+
+## Setup
+
+### Install Cypress & Dependencies
+
+```bash
+# Install Cypress
+npm install cypress --save-dev
+
+# Install Faker for test data
+npm install @faker-js/faker --save-dev
+
+# Or install both at once
+npm install cypress @faker-js/faker --save-dev
+```
+
+## Project Structure
+
+```
+cypress/
+├── e2e/trial-opportunities.cy.ts     # Main tests
+├── fixtures/empty-results.json       # Mock data
+└── support/pages/trialPage.ts        # Page object
+```
+
+## Testing Approach
+
+**Framework**: Cypress - chose it for reliable browser testing and good debugging tools.
+
+**Pattern**: Page Object Model to keep selectors and actions organized.
+
+**Strategy**: Mix of happy path testing and error scenarios. 
+
+
+## Running Tests
+
+### Interactive Mode (recommended)
+```bash
+npx cypress open
+```
+Select "E2E Testing" and pick your browser.
+
+### Headless Mode
+```bash
+npx cypress run
+```
+
+### Specific Test File
+```bash
+npx cypress run --spec "cypress/e2e/trial-opportunities.cy.ts"
+```
